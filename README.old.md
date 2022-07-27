@@ -1,1 +1,0 @@
-# bandapixels-test-task_Jira-Clone
