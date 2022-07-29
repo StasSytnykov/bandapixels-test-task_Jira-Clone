@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+p {
+  margin: 0;
+}
+
+.app {
+  padding: 60px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 70px;
+  margin: 0 0 40px 0;
+}
+
+.contentContainer {
+  width: 1800px;
+  height: 660px;
+  border: 1px solid #111111;
+  border-radius: 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
