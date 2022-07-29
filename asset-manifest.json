@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/bandapixels-test-task_jira-clone/static/js/main.2510128a.js",
+    "main.css": "/bandapixels-test-task_jira-clone/static/css/main.3921e4a0.css",
+    "main.js": "/bandapixels-test-task_jira-clone/static/js/main.3b62657f.js",
     "index.html": "/bandapixels-test-task_jira-clone/index.html",
-    "main.2510128a.js.map": "/bandapixels-test-task_jira-clone/static/js/main.2510128a.js.map"
+    "main.3921e4a0.css.map": "/bandapixels-test-task_jira-clone/static/css/main.3921e4a0.css.map",
+    "main.3b62657f.js.map": "/bandapixels-test-task_jira-clone/static/js/main.3b62657f.js.map"
   },
   "entrypoints": [
-    "static/js/main.2510128a.js"
+    "static/css/main.3921e4a0.css",
+    "static/js/main.3b62657f.js"
   ]
 }
