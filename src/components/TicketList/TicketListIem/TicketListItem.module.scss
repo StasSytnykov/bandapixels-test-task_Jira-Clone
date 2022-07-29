@@ -3,8 +3,10 @@
   align-items: center;
   justify-content: center;
 
-  width: 1720px;
-  height: 130px;
   border: 1px solid #333333;
   border-radius: 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
