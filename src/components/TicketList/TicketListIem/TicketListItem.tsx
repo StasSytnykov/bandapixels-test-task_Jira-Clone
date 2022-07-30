@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import style from './TicketListItem.module.scss'
+import style from '../../../style/TicketStyle/TicketListItem.module.scss'
 
 interface TicketItemProps {
   id: number

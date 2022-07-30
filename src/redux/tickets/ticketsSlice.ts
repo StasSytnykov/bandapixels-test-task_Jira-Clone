@@ -25,7 +25,7 @@ const ticketsSlice = createSlice({
       })
       .addCase(fetchTickets.fulfilled, (state, action) => {
         state.entities = action.payload
-        state.error = null
+        state.loading = false
       })
   },
 })
