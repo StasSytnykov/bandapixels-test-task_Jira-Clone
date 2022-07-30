@@ -1,7 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-export type Tickets = { userId: number; id: number; title: string; completed: boolean }
+export type Tickets = {
+  userId: number
+  id: number
+  title: string
+  completed: boolean
+  status: string
+}
 
 export const fetchTickets = createAsyncThunk<Tickets[], undefined>(
   'tickets/fetchTickets',

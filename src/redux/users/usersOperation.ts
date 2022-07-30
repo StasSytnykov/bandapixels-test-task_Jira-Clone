@@ -8,8 +8,6 @@ export const fetchUsers = createAsyncThunk<Users[], undefined>(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
-      console.log(data)
-
       return data
     } catch (error) {
       rejectWithValue('Server error!')
