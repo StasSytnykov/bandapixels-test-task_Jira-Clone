@@ -22,8 +22,8 @@ export const TicketList: React.FC = () => {
                 return <Avatar key={ticket.id} name={user.name} round={true} size='90' />
               }
             })}
-            <p>{ticket.title}</p>
-            <span>{ticket.status}</span>
+            <p className={style.ticketText}>{ticket.title}</p>
+            <span className={style.ticketStatus}>{ticket.status}</span>
           </li>
         ))}
       </ul>

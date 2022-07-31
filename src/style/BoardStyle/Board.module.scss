@@ -4,7 +4,7 @@
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 36px;
 
   margin-bottom: 60px;
 }
@@ -13,6 +13,14 @@
   &:not(:first-child) {
     border-left: 1px solid #111111;
   }
+}
+
+.boardItemTitle {
+  font-size: 48px;
+  line-height: 1.16;
+  text-align: center;
+
+  margin-bottom: 20px;
 }
 
 .boardList {
@@ -24,4 +32,8 @@
 
 .boardListGapReset {
   margin-left: 0;
+}
+
+.boardListItem {
+  padding-right: 122px;
 }

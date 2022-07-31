@@ -20,7 +20,7 @@ export const BoardList: React.FC<BoardListProps> = ({ ticketStatus, marginReset 
         if (ticket.status === ticketStatus) {
           return (
             <li
-              className={style.ticketListItem}
+              className={`${style.ticketListItem} ${style.boardListItem}`}
               onClick={() => dispatch(changeStatus(ticket.id))}
               key={ticket.id}
             >
@@ -29,7 +29,7 @@ export const BoardList: React.FC<BoardListProps> = ({ ticketStatus, marginReset 
                   return <Avatar key={ticket.id} name={user.name} round={true} size='90' />
                 }
               })}
-              <p>{ticket.title}</p>
+              <p className={style.ticketText}>{ticket.title}</p>
             </li>
           )
         }
