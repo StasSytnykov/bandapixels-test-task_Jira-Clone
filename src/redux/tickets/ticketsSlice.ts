@@ -19,19 +19,19 @@ const ticketsSlice = createSlice({
   reducers: {
     inProgressStatus(state, action) {
       const toggleTicket = state.entities.find((ticket) => ticket.id === action.payload)
-      if (toggleTicket?.status === 'To do') {
-        toggleTicket.status = 'In progress'
+      if (toggleTicket) {
+        switch (toggleTicket.status) {
+          case 'To do':
+            toggleTicket.status = 'In progress'
+            break
+          case 'In progress':
+            toggleTicket.status = 'Done'
+            break
+          default:
+            break
+        }
       }
-      // if (toggleTicket?.status === 'In progress') {
-      //   toggleTicket.status = 'Done'
-      // }
     },
-    // doneStatus(state, action) {
-    //   const toggleTicket = state.entities.find((ticket) => ticket.id === action.payload)
-    //   if (toggleTicket?.status === 'In progress') {
-    //     toggleTicket.status = 'Done'
-    //   }
-    // },
   },
   extraReducers: (builder) => {
     builder
