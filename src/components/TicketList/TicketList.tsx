@@ -8,10 +8,23 @@ export const TicketList: React.FC = () => {
   const users = useAppSelector((state) => state.users.entities)
   const dispatch = useAppDispatch()
 
+  const sortedTicked = [...tickets].sort((firstTicket, secondTicket) => {
+    const ticketA = firstTicket.status.toUpperCase()
+    const ticketB = secondTicket.status.toUpperCase()
+    if (ticketA < ticketB) {
+      return 1
+    }
+    if (ticketA > ticketB) {
+      return -1
+    }
+
+    return 0
+  })
+
   return (
     <div className={style.ticketListContainer}>
       <ul className={style.ticketList}>
-        {tickets.map((ticket) => (
+        {sortedTicked.map((ticket) => (
           <li
             onClick={() => dispatch(changeStatus(ticket.id))}
             className={style.ticketListItem}
