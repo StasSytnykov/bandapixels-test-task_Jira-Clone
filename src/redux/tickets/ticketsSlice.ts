@@ -17,7 +17,7 @@ const ticketsSlice = createSlice({
   name: 'tickets',
   initialState,
   reducers: {
-    inProgressStatus(state, action) {
+    changeStatus(state, action) {
       const toggleTicket = state.entities.find((ticket) => ticket.id === action.payload)
       if (toggleTicket) {
         switch (toggleTicket.status) {
@@ -48,6 +48,6 @@ const ticketsSlice = createSlice({
   },
 })
 
-export const { inProgressStatus } = ticketsSlice.actions
+export const { changeStatus } = ticketsSlice.actions
 
 export default ticketsSlice.reducer

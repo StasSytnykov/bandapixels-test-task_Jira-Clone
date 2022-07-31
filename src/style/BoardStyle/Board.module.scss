@@ -1,0 +1,26 @@
+.boardContainer {
+  @extend %border;
+
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+  margin-bottom: 60px;
+}
+
+.boardItem {
+  &:not(:first-child) {
+    border-left: 1px solid #111111;
+  }
+}
+
+.boardList {
+  margin-left: 36px;
+
+  overflow-y: scroll;
+  @extend %scroll;
+  &.boardListGap {
+    margin-right: 0;
+  }
+}

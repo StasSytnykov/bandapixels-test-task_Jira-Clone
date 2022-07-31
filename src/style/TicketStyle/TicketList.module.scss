@@ -1,23 +1,14 @@
 .ticketList {
-  height: 580px;
+  @extend %scroll;
+}
 
-  overflow-y: scroll;
+.ticketListItem {
+  @include listStyle(none);
+}
 
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
+.ticketListContainer {
+  @extend %border;
+  padding: 40px;
 
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 100px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 100px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+  margin-bottom: 60px;
 }

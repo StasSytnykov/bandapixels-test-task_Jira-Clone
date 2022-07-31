@@ -1,4 +1,4 @@
-.item {
+@mixin listStyle($width: 100%) {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,8 +7,8 @@
   margin-right: 5px;
   padding: 0 35px;
 
-  border: 1px solid #333333;
-  border-radius: 15px;
+  width: $width;
+  @extend %border;
 
   &:not(:last-child) {
     margin-bottom: 20px;

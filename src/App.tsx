@@ -4,7 +4,7 @@ import { fetchTickets } from './redux/tickets/ticketsOperation'
 import { fetchUsers } from './redux/users/usersOperation'
 import { TicketList } from './components/TicketList/TicketList'
 import { Board } from './components/Board/Board'
-import style from './style/App.module.scss'
+import style from './style/index.module.scss'
 
 function App() {
   const dispatch = useAppDispatch()
