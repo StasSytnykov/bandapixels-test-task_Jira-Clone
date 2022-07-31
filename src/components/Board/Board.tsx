@@ -1,5 +1,6 @@
 import { ToDoList } from './ToDoList'
 import { InProgressList } from './InProgressList'
+import { DoneList } from './DoneList'
 import style from '../../style/index.module.scss'
 
 export const Board: React.FC = () => {
@@ -7,7 +8,7 @@ export const Board: React.FC = () => {
     <div className={style.boardContainer}>
       <ToDoList />
       <InProgressList />
-      <ToDoList />
+      <DoneList />
     </div>
   )
 }

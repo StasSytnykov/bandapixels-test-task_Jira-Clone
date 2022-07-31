@@ -6,15 +6,16 @@ import style from '../../../style/index.module.scss'
 
 interface BoardListProps {
   ticketStatus: string
+  marginReset: string | null
 }
 
-export const BoardList: React.FC<BoardListProps> = ({ ticketStatus }) => {
+export const BoardList: React.FC<BoardListProps> = ({ ticketStatus, marginReset }) => {
   const tickets = useAppSelector((state) => state.tickets.entities)
   const users = useAppSelector((state) => state.users.entities)
   const dispatch = useAppDispatch()
 
   return (
-    <ul className={`${style.boardList}`}>
+    <ul className={`${style.boardList} ${marginReset}`}>
       {tickets.map((ticket) => {
         if (ticket.status === ticketStatus) {
           return (
@@ -39,4 +40,5 @@ export const BoardList: React.FC<BoardListProps> = ({ ticketStatus }) => {
 
 BoardList.propTypes = {
   ticketStatus: PropTypes.string.isRequired,
+  marginReset: PropTypes.string,
 }

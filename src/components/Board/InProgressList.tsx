@@ -5,7 +5,7 @@ export const InProgressList: React.FC = () => {
   return (
     <div className={style.boardItem}>
       <h3>In progress</h3>
-      <BoardList ticketStatus={'In progress'} />
+      <BoardList marginReset={null} ticketStatus={'In progress'} />
     </div>
   )
 }

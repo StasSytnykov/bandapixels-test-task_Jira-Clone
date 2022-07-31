@@ -20,7 +20,8 @@
 
   overflow-y: scroll;
   @extend %scroll;
-  &.boardListGap {
-    margin-right: 0;
-  }
+}
+
+.boardListGapReset {
+  margin-left: 0;
 }
