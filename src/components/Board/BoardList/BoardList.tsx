@@ -27,7 +27,7 @@ export const BoardList: React.FC<BoardListProps> = ({ ticketStatus, marginReset 
               {users.map(
                 (user) =>
                   user.id === ticket.userId && (
-                    <Avatar key={ticket.id} name={user.name} round={true} size='90' />
+                    <Avatar key={ticket.id} name={user.name} round size='90' />
                   ),
               )}
               <p className={style.ticketText}>{ticket.title}</p>

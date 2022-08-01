@@ -1,6 +1,6 @@
-import { ToDoList } from './ToDoList'
-import { InProgressList } from './InProgressList'
-import { DoneList } from './DoneList'
+import { ToDoList } from './BoardList/ToDoList'
+import { InProgressList } from './BoardList/InProgressList'
+import { DoneList } from './BoardList/DoneList'
 import style from './Board.module.scss'
 
 export const Board: React.FC = () => {

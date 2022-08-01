@@ -1,5 +1,5 @@
 import { BoardList } from '../BoardList'
-import style from '../Board.module.scss'
+import style from '../../Board.module.scss'
 
 export const InProgressList: React.FC = () => {
   return (

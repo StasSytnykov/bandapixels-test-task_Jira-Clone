@@ -21,11 +21,12 @@ export const TicketList: React.FC = () => {
             className={style.ticketListItem}
             key={ticket.id}
           >
-            {users.map((user) => {
-              if (user.id === ticket.userId) {
-                return <Avatar key={ticket.id} name={user.name} round={true} size='90' />
-              }
-            })}
+            {users.map(
+              (user) =>
+                user.id === ticket.userId && (
+                  <Avatar key={ticket.id} name={user.name} round size='90' />
+                ),
+            )}
             <p className={style.ticketText}>{ticket.title}</p>
             <span className={style.ticketStatus}>{ticket.status}</span>
           </li>
