@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useAppDispatch } from './redux/hook'
 import { fetchTickets } from './redux/tickets/ticketsOperation'
 import { fetchUsers } from './redux/users/usersOperation'
-import { TicketList } from './components/TicketList/TicketList'
+import { TicketList } from './components/TicketList'
 import { Board } from './components/Board/Board'
 import style from './style/index.module.scss'
 
@@ -11,8 +11,8 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchUsers())
-    dispatch(fetchTickets()), [dispatch]
-  })
+    dispatch(fetchTickets())
+  }, [dispatch])
 
   return (
     <div className={style.app}>
