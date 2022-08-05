@@ -1,6 +1,7 @@
 import Avatar from 'react-avatar'
 import PropTypes from 'prop-types'
-import { useAppDispatch, useAppSelector } from 'redux/hook'
+import { useAppDispatch, useAppSelector } from 'redux/hooks/hook'
+import { getTicketEntities, getUsersEntities } from 'redux/selectors/selectors'
 import { changeStatus } from 'redux/tickets/ticketsSlice'
 import style from '../Board.module.scss'
 
@@ -10,8 +11,8 @@ interface BoardListProps {
 }
 
 export const BoardList: React.FC<BoardListProps> = ({ ticketStatus, marginReset }) => {
-  const tickets = useAppSelector((state) => state.tickets.entities)
-  const users = useAppSelector((state) => state.users.entities)
+  const tickets = useAppSelector(getTicketEntities)
+  const users = useAppSelector(getUsersEntities)
   const dispatch = useAppDispatch()
 
   return (

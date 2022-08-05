@@ -1,16 +1,15 @@
 import Avatar from 'react-avatar'
 import ClipLoader from 'react-spinners/ClipLoader'
-import { useAppSelector, useAppDispatch } from 'redux/hook'
+import { useAppSelector, useAppDispatch } from 'redux/hooks/hook'
+import { getTicketEntities, getUsersEntities, getUsersLoading } from 'redux/selectors/selectors'
 import { changeStatus } from 'redux/tickets/ticketsSlice'
 import style from './TicketList.module.scss'
 
 export const TicketList: React.FC = () => {
-  const tickets = useAppSelector((state) => state.tickets.entities)
-  const users = useAppSelector((state) => state.users.entities)
-  const isLoading = useAppSelector((state) => state.users.loading)
+  const tickets = useAppSelector(getTicketEntities)
+  const users = useAppSelector(getUsersEntities)
+  const isLoading = useAppSelector(getUsersLoading)
   const dispatch = useAppDispatch()
-
-  console.log(isLoading)
 
   const sortedTicked = [...tickets].sort((firstTicket, secondTicket) =>
     secondTicket.status.localeCompare(firstTicket.status),

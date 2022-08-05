@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useAppDispatch } from './redux/hook'
+import { useAppDispatch } from './redux/hooks/hook'
 import { fetchTickets } from './redux/tickets/ticketsOperation'
 import { fetchUsers } from './redux/users/usersOperation'
 import { TicketList } from './components/TicketList'
